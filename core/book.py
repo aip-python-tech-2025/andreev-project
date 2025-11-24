@@ -7,7 +7,9 @@ class Book:
         self.__users = []
 
     def __repr__(self):
-        return f'{self.name} {self.authors} {self.genre}'
+        authors = ", ".join([str(a) for a in self.authors])
+        genres = ", ".join([str(a) for a in self.genre])
+        return f'{self.name}\nАвторы: {authors}\nЖанры: {genres}'
 
     def read(self):
         return self.__text
